@@ -1,12 +1,3 @@
-import {
-  AcademicCapIcon,
-  BuildingOffice2Icon,
-  CalendarIcon,
-  FlagIcon,
-  MapIcon,
-  SparklesIcon,
-} from '@heroicons/react/24/outline';
-
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/hero_bg.png';
@@ -54,19 +45,15 @@ export const heroData: Hero = {
   name: `Hi, I'm Adrián Bazaga.`,
   description: (
     <>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-      Welcome! I'm a <strong className="text-stone-100">Machine Learning Engineer</strong> based in London, presently at <strong className="text-stone-100">Panakeia</strong>, developing ML systems for cancer diagnostics via medical imagery. 
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg justify">
+      Welcome to my website! 
+      </p>   
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg justify">
+      I'm a <strong className="text-stone-100">Machine Learning Engineer</strong> based in London, presently at <strong className="text-stone-100">Panakeia</strong>, developing ML systems for cancer diagnostics via medical imagery.
       </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-      I've nearly completed my PhD in Deep Learning (Natural Language Processing) from <strong className="text-stone-100">Cambridge University</strong>, advised by <strong className="text-stone-100">Gos Micklem</strong> and <strong className="text-stone-100">Pietro Liò</strong>. My research concentrates on devising architectures for NLP systems, with emphasis on multi-modality and Large Language Models. For my engineering work, I'm dedicated to designing software systems for streamlining research, optimizing and scaling ML pipelines. I'm proficient in translating user requirements to software, and my diverse experience enables me to thrive in cross-disciplinary environments.
-      </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-      Beyond ML, I'm passionate about cybersecurity, specifically in innovating anti DDoS through deep learning. In 2021, I founded a cybersecurity company, <strong className="text-stone-100">PacketWall</strong>, as a hobby. As CTO, I integrated deep learning and networking into innovative solutions, growing a client base to about 100 within a year.</p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-      Recently, I've been exploring how advancements in natural language processing, specifically generative models, can enhance and support modern education systems.</p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-      In my free time, you can catch me training in the gym, enjoying nature, or tasting new dishes.
-      </p>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg justify">
+      I have (almost) a PhD in Deep Learning (Natural Language Processing) from <strong className="text-stone-200"><a href="https://www.cam.ac.uk/">University of Cambridge</a></strong>, advised by <strong className="text-stone-100">Gos Micklem</strong> and <strong className="text-stone-100">Pietro Liò</strong>.
+      </p> 
     </>
   ),
   actions: [
@@ -78,17 +65,23 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
-  aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
-  ],
+  description: (
+    <>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg justify">
+      My research focuses on devising architectures for NLP systems, with emphasis on multi-modality and Large Language Models. For my engineering work, I'm dedicated to designing software systems for streamlining research, optimizing and scaling ML pipelines. I'm proficient in translating user requirements to software, and my diverse experience enables me to thrive in cross-disciplinary environments.
+      </p>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg justify">
+      Beyond ML, I'm passionate about cybersecurity, specifically in innovating anti DDoS through deep learning. In 2021, I founded a cybersecurity company, <a href="https://www.packetwall.org/"><strong className="text-stone-200">PacketWall</strong></a>, as a hobby. As CTO, I integrated deep learning and networking into innovative solutions, growing a client base to about 100 within a year.
+      </p>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg justify">
+      Recently, I've been exploring how advancements in natural language processing, specifically generative models, can enhance and support modern education systems and government. If you are interested in discussing about this, please contact me.
+      </p>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg justify">
+      In my free time, you can catch me training in the gym, enjoying nature, or tasting new dishes.
+      </p>      
+    </>
+  ),
+  aboutItems: [],
 };
 
 /**
