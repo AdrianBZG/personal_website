@@ -22,6 +22,7 @@ export interface HomepageMeta {
  */
 export interface Hero {
   imageSrc: string;
+  profileImageSrc: string;
   name: string;
   description: JSX.Element;
   actions: HeroActionItem[];
@@ -74,13 +75,12 @@ export interface SkillGroup {
 }
 
 /**
- * Portfolio section
+ * Research section
  */
-export interface PortfolioItem {
+export interface ResearchItem {
+  date: string;
+  location: string;
   title: string;
-  description: string;
-  url: string;
-  image: string | StaticImageData;
 }
 
 /**

@@ -1,6 +1,6 @@
 {
-  "name": "react-resume-template",
-  "short_name": "react-resume-template",
+  "name": "adrian-resume-web",
+  "short_name": "adrian-resume-web",
   "icons": [
     {"src": "/icon-192.png", "type": "image/png", "sizes": "192x192"},
     {"src": "/icon-512.png", "type": "image/png", "sizes": "512x512"}

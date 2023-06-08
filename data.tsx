@@ -1,6 +1,5 @@
 import {
   AcademicCapIcon,
-  ArrowDownTrayIcon,
   BuildingOffice2Icon,
   CalendarIcon,
   FlagIcon,
@@ -9,31 +8,16 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+import heroImage from '../images/hero_bg.png';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
   ContactSection,
-  ContactType,
   Hero,
   HomepageMeta,
-  PortfolioItem,
+  ResearchItem,
   SkillGroup,
   Social,
   TestimonialSection,
@@ -44,22 +28,19 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Home | Adrián Bazaga',
+  description: "Adrián Bazaga Personal Website",
 };
 
 /**
  * Section definition
  */
 export const SectionId = {
-  Hero: 'hero',
+  Intro: 'Intro',
   About: 'about',
-  Contact: 'contact',
-  Portfolio: 'portfolio',
+  Research: 'research',
   Resume: 'resume',
-  Skills: 'skills',
-  Stats: 'stats',
-  Testimonials: 'testimonials',
+  Contact: 'contact'
 } as const;
 
 export type SectionId = typeof SectionId[keyof typeof SectionId];
@@ -69,33 +50,26 @@ export type SectionId = typeof SectionId[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  profileImageSrc: profilepic,
+  name: `Hi, I'm Adrián Bazaga.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+      Welcome! I'm a <strong className="text-stone-100">Machine Learning Engineer</strong> based in London, presently at <strong className="text-stone-100">Panakeia</strong>, developing ML systems for cancer diagnostics via medical imagery. 
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+      I've nearly completed my PhD in Deep Learning (Natural Language Processing) from <strong className="text-stone-100">Cambridge University</strong>, advised by <strong className="text-stone-100">Gos Micklem</strong> and <strong className="text-stone-100">Pietro Liò</strong>. My research concentrates on devising architectures for NLP systems, with emphasis on multi-modality and Large Language Models. For my engineering work, I'm dedicated to designing software systems for streamlining research, optimizing and scaling ML pipelines. I'm proficient in translating user requirements to software, and my diverse experience enables me to thrive in cross-disciplinary environments.
+      </p>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+      Beyond ML, I'm passionate about cybersecurity, specifically in innovating anti DDoS through deep learning. In 2021, I founded a cybersecurity company, <strong className="text-stone-100">PacketWall</strong>, as a hobby. As CTO, I integrated deep learning and networking into innovative solutions, growing a client base to about 100 within a year.</p>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+      Recently, I've been exploring how advancements in natural language processing, specifically generative models, can enhance and support modern education systems.</p>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+      In my free time, you can catch me training in the gym, enjoying nature, or tasting new dishes.
       </p>
     </>
   ),
   actions: [
-    {
-      href: '/assets/resume.pdf',
-      text: 'Resume',
-      primary: true,
-      Icon: ArrowDownTrayIcon,
-    },
-    {
-      href: `#${SectionId.Contact}`,
-      text: 'Contact',
-      primary: false,
-    },
   ],
 };
 
@@ -121,146 +95,57 @@ export const aboutData: About = {
  * Skills section
  */
 export const skills: SkillGroup[] = [
-  {
-    name: 'Spoken languages',
-    skills: [
-      {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
-  {
-    name: 'Frontend development',
-    skills: [
-      {
-        name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
-      },
-    ],
-  },
 ];
 
 /**
- * Portfolio section
+ * Research section
  */
-export const portfolioItems: PortfolioItem[] = [
+export const researchItems: ResearchItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage1,
+    date: '2022/7/12',
+    location: 'Database (Oxford)',
+    title: 'HumanMine: advanced data searching, analysis and cross-species comparison',
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage2,
+    date: '2021/9/16',
+    location: 'Nature Scientific Reports',
+    title: 'Translating synthetic natural language to database queries with a polyglot deep learning framework',
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage3,
+    date: '2020/7/1',
+    location: 'Nature Scientific Reports',
+    title: 'Genome-wide investigation of gene-cancer associations for the prediction of novel therapeutic targets in oncology',
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage4,
+    date: '2019/10',
+    location: 'Neuromuscular Disorders',
+    title: 'Automated diagnosis of collagen VI related muscular dystrophies using advanced image analysis and machine learning',
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage5,
+    date: '2019/9',
+    location: 'Applied Soft Computing',
+    title: 'A Convolutional Neural Network for the Automatic Diagnosis of Collagen VI related Muscular Dystrophies',
   },
   {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage6,
+    date: '2019/6/26',
+    location: 'International Workshop on Self-Organizing Maps',
+    title: 'Network Community Cluster-Based Analysis for the Identification of Potential Leukemia Drug Targets',
   },
   {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage7,
+    date: '2019/3',
+    location: 'Partnership for Advanced Computing in Europe',
+    title: 'Optimization of Computationally and I/O Intense Patterns in Electronic Structure and Machine Learning Algorithms',
   },
   {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage8,
+    date: '2018/12',
+    location: 'Bioinformatics (Oxford)',
+    title: 'BIOLITMAP: a web-based geolocated, temporal and thematic visualization of the evolution of bioinformatics publications',
   },
   {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage11,
-  },
+    date: '2018',
+    location: 'arXiv',
+    title: 'Performance Evaluation of an Algorithm-based Asynchronous Checkpoint-Restart Fault Tolerant Application Using Mixed MPI/GPI-2',
+  }
 ];
 
 /**
@@ -268,42 +153,76 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2019 - 2023',
+    location: 'University of Cambridge, Cambridge, United Kingdom',
+    title: 'Doctor of Philosophy (PhD), Deep Learning in Natural Language Processing',
+    content: <p>"Multi-Modal Deep Learning-based Information Retrieval Systems for Language to Query Translation". Advised by Gos Micklem and Pietro Liò. Senior Scholarship Award by Fitzwilliam College</p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2017 - 2019',
+    location: 'Universitat Politècnica de Catalunya (UPC), Barcelona, Spain',
+    title: 'Master of Science, Machine Learning',
+    content: <p>Finished with Honours. Thesis carried out at University of Cambridge.</p>,
+  },
+  {
+    date: '2013 - 2017',
+    location: 'University of La Laguna (ULL), Tenerife, Spain',
+    title: 'Bachelor of Engineering, Computer Science',
+    content: <p>Finished with Honours</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'March 2022 - Present',
+    location: 'Panakeia Technologies, London, United Kingdom',
+    title: 'Machine Learning Engineer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        
       </p>
-    ),
+    )
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'November 2021 - March 2023',
+    location: 'Packetwall Solutions Ltd, Cambridge, United Kingdom',
+    title: 'Chief Technology Officer & Founder',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        
       </p>
-    ),
+    )
   },
+  {
+    date: 'February 2021 - March 2022',
+    location: 'Storm Therapeutics Ltd, Cambridge, United Kingdom',
+    title: 'Machine Learning Engineer',
+    content: (
+      <p>
+        
+      </p>
+    )
+  },
+  {
+    date: 'October 2018 - January 2019',
+    location: 'Spanish National Research Council (CSIC), Barcelona, Spain',
+    title: 'Machine Learning Engineer',
+    content: (
+      <p>
+        
+      </p>
+    )
+  },
+  {
+    date: 'October 2017 - September 2019',
+    location: 'Spanish National Supercomputing Center (BSC-CNS), Barcelona, Spain',
+    title: 'Machine Learning Engineer',
+    content: (
+      <p>
+        
+      </p>
+    )
+  }
 ];
 
 /**
@@ -335,29 +254,9 @@ export const testimonial: TestimonialSection = {
  */
 
 export const contact: ContactSection = {
-  headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  headerText: '.',
+  description: '.',
   items: [
-    {
-      type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
-    },
-    {
-      type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
-    },
-    {
-      type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
-    },
   ],
 };
 
@@ -365,9 +264,6 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/tbakerx/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'GitHub', Icon: GithubIcon, href: 'https://github.com/adrianbzg'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/adrianbazaga/'},
 ];
