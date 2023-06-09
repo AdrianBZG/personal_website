@@ -11,4 +11,4 @@ Simply run the script `run_website_container.sh`, which will
 
 1. Build the Docker image including node and yarn
 2. Run the entrypoint for running the website
-3. Deploy it on port EXPOSE_PORT (3100 by default)
+3. Deploy it on port `EXPOSE_PORT` (3100 by default)
