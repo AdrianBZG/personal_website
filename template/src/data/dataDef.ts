@@ -1,4 +1,3 @@
-import {StaticImageData} from 'next/image';
 import {FC, ForwardRefExoticComponent, SVGProps} from 'react';
 
 import {IconProps} from '../components/Icon/Icon';
@@ -60,21 +59,6 @@ export interface Stat {
 }
 
 /**
- * Skills section
- */
-
-export interface Skill {
-  name: string;
-  level: number;
-  max?: number;
-}
-
-export interface SkillGroup {
-  name: string;
-  skills: Skill[];
-}
-
-/**
  * Research section
  */
 export interface ResearchItem {
@@ -91,29 +75,6 @@ export interface TimelineItem {
   location: string;
   title: string;
   content: JSX.Element;
-}
-
-/**
- * Testimonial section
- */
-export interface TestimonialSection {
-  imageSrc?: string | StaticImageData;
-  testimonials: Testimonial[];
-}
-
-export interface Testimonial {
-  image?: string;
-  name: string;
-  text: string;
-}
-
-/**
- * Contact section
- */
-export interface ContactSection {
-  headerText?: string;
-  description: string;
-  items: ContactItem[];
 }
 
 export const ContactType = {
