@@ -43,6 +43,13 @@ export interface About {
   aboutItems: AboutItem[];
 }
 
+/**
+ * Contact section
+ */
+export interface Contact {
+  description: JSX.Element;
+}
+
 export interface AboutItem {
   label: string;
   text: string;
