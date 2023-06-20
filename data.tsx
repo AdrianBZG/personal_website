@@ -178,7 +178,7 @@ export const experience: TimelineItem[] = [
     )
   },
   {
-    date: 'February 2021 - March 2022',
+    date: 'February 2019 - March 2022',
     location: 'Storm Therapeutics Ltd, Cambridge, United Kingdom',
     title: 'Machine Learning Engineer',
     content: (
